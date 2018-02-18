@@ -19,6 +19,10 @@ export class CountryService {
     );
   }
 
+  addCountry (country: Country): Observable<Country> {
+    return this.http.post<Country>('http://localhost:8000/api/countries', country, httpOptions).pipe();
+  }
+
   /**
    * Handle Http operation that failed.
    * Let the app continue.
