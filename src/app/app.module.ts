@@ -9,6 +9,7 @@ import {RouterModule} from '@angular/router';
 import {routes} from './app.routing';
 import { CountryAddComponent } from './country-add/country-add.component';
 import {CountryService} from './country.service';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import {CountryService} from './country.service';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
   providers: [CountryService],
   bootstrap: [AppComponent]
