@@ -7,19 +7,22 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { CountriesComponent } from './countries/countries.component';
 import {RouterModule} from '@angular/router';
 import {routes} from './app.routing';
+import { CountryAddComponent } from './country-add/country-add.component';
+import {CountryService} from './country.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    CountriesComponent
+    CountriesComponent,
+    CountryAddComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [CountryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
